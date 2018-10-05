@@ -1,6 +1,16 @@
 import React from "react";
-import "../index.css";
+import "../mycvgrid.css";
 import Avatars from "../components/Avatars";
+import '../images/SameerSawant_v1.jpg';
+
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from 'react-router-dom';
 
 
 
@@ -65,16 +75,15 @@ export default class Hovedside extends React.Component
             </symbol></svg>
           <div className="grid">
             <header className="header">
-           
-
+            <span><h3>CV </h3></span>
             <span> <Avatars/> </span>
             <span>
             <aside className="about">
               <section className="section" id="about">
                 
                 <p className="card">
-                <h2>Sameer Sawant</h2>
-            <h1>samappy@gmail.com</h1>
+                <h1>Sameer Sawant</h1>
+            <h2>samappy@gmail.com</h2>
             +47 98 00 03 44</p>
             </section>
             </aside>
@@ -104,7 +113,7 @@ Sameer har bred erfaring i å jobbe med databaser som Oracle, SQL server. Han be
                     <h3>Skatteetaten</h3>
                     <p>-Java utvikler og testansvarlig i devops team</p>
                     <p>- Minerva – Plattform for big data håntering med AI analyse</p>
-                   
+                    <Link to="/Skatteetaten">Skatteetaten</Link>
                     
                   </li>
                  

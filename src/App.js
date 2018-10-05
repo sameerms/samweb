@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  Redirect
-} from 'react-router-dom';
-import Erfaring from './components/Erfaringkomponent';
-import Prosjekter from './components/Prosjekterkomponent';
+import './mycvgrid.css';
+import {Route, Switch } from 'react-router-dom';
+import Main from '../src/components/Main';
 import Hovedside from '../src/components/hovedside'
+import Erfaringkomponent from './components/Erfaringkomponent';
+import Prosjekterkomponent from './components/Prosjekterkomponent';
+import Skatteetatenkomponent from './components/Skatteetatenkomponent';
 
 class App extends Component {
 
@@ -23,14 +19,22 @@ class App extends Component {
   }
   render() {
     return (
-      <Router>
+      
       <div className="App">
-        <Hovedside/>
-        <Route path="/erfaring" component={Erfaring} />
-        <Route path="/prosjekter" component={Prosjekter} />
+       
+          <Switch>
+            <Route exact path="/" component={Hovedside} />
+            <Route path="/Erfaring" component={Erfaringkomponent} />
+            <Route path="/Prosjekter" component={Prosjekterkomponent} />
+            <Route path="/Skatteetaten" component={Skatteetatenkomponent} />
+            <Route path="/Helsedirektoratet" component={Prosjekterkomponent} />
+            <Route path="/Telenor" component={Prosjekterkomponent} />
+            
+          </Switch>
       </div>
-      </Router>
+      
     );
+    
   }
 }
 
